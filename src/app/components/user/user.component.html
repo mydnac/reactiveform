@@ -1,0 +1,34 @@
+<div>
+  <label>
+    Username:
+    <input type="text" [formControl]="username">
+  </label>
+  <label>
+    Email:
+    <input type="text" [formControl]="email">
+  </label>
+  <label>
+    Password:
+    <input type="text" [formControl]="password">
+  </label>
+  <label>
+    Address:
+    <input type="text" [formControl]="street">
+    <input type="number" [formControl]="postcode">
+    <input type="text" [formControl]="city">
+  </label>
+
+
+  <button (click)="newUser()">Inscription</button>
+
+  <p>
+    Nouvel utilisateur :
+  </p>
+  <div *ngIf="user.username">
+    Nom: {{user.username}}
+    Mail: {{user.email}}
+    Password: {{user.password}}
+    Adresse: {{user.street}}, {{user.postcode}}, {{user.city}}
+  </div>
+
+</div>
